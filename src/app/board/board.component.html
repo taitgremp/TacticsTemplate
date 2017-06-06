@@ -1,13 +1,36 @@
-<table style="border-collapse: collapse;">
-    <ng-container *ngFor="let tileArray of tileBoard; let i = index">
-        <tr>
-        <!--<div>-->
-        <ng-container *ngFor="let tile of tileArray; let i = index">
-            <td class="tileStyle" (click)="handleTileClick(tile)">
-            <tile  [thisNum]="tile" ></tile>
-            </td>
+<md-toolbar color="primary" style="box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);     position: relative;
+    z-index: 10;" scroll-y-offset-element="scroll-y-offset-element">
+  <a md-button class="docs-button" >Components</a>
+  <a md-button class="docs-button" >Guides</a>
+</md-toolbar>
+
+<!--<md-sidenav-container class="docs-component-viewer-sidenav-container mat-sidenav-container mat-sidenav-transition">
+    <md-sidenav mode="side" opened="true" style="background: #3f51b5; " >Drawer content</md-sidenav>
+    <div class="docs-component-sidenav-content" style="overflow:auto !important;height: 24vw;">
+    <table style="border-collapse: collapse;">
+        <ng-container *ngFor="let tileArray of tileBoard; let i = index">
+            <tr>
+                <ng-container *ngFor="let tile of tileArray; let i = index">
+                    <td class="tileStyle" (click)="handleTileClick(tile)">
+                        <tile [thisNum]="tile"></tile>
+                    </td>
+                </ng-container>
+            </tr>
         </ng-container>
-        <!--</div>-->
-        </tr>
-    </ng-container>
-</table>
+    </table>
+    </div>
+
+</md-sidenav-container>-->
+<div>
+        <table style="border-collapse: collapse;justify-content: center;display:flex;margin-top:4vh;">
+        <ng-container *ngFor="let tileArray of tileBoard; let i = index">
+            <tr>
+                <ng-container *ngFor="let tile of tileArray; let i = index">
+                    <td class="tileStyle" (click)="handleTileClick(tile)">
+                        <tile [thisNum]="tile"></tile>
+                    </td>
+                </ng-container>
+            </tr>
+        </ng-container>
+    </table>
+</div>
